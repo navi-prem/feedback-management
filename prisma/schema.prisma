@@ -11,7 +11,11 @@ model Student {
     card_id String
     reg_no String @id
     name String
+<<<<<<< HEAD
     email String 
+=======
+    email String
+>>>>>>> origin/main
 
     year_reln Year @relation(fields: [year],references: [year])
     year Int
@@ -35,6 +39,7 @@ model Year {
 model Teacher {
     name String
     id String @id
+    email String
     card_id String
     email String
     as_HOD Department?
