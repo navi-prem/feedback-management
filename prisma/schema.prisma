@@ -11,6 +11,7 @@ model Student {
     card_id String
     reg_no String @id
     name String
+    email String 
 
     year_reln Year @relation(fields: [year],references: [year])
     year Int
@@ -22,7 +23,7 @@ model Student {
 
     responded Response[]
 
-    @@unique([card_id,reg_no])
+    @@unique([card_id,reg_no,email])
 }
 
 model Year {
@@ -35,9 +36,10 @@ model Teacher {
     name String
     id String @id
     card_id String
+    email String
     as_HOD Department?
     hosted_events Event[]
-    @@unique([id,card_id])
+    @@unique([id,card_id,email])
 }
 
 model Department {
